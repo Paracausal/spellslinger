@@ -1,0 +1,8 @@
+<div cdkDropList
+     [cdkDropListData]="zone"
+     [ngClass]="'zone zone' + index"
+     (cdkDropListDropped)="emitEvent($event)">
+     <ng-container *ngFor="let card of zone">
+        <card [card]="card"></card>
+    </ng-container>
+</div>

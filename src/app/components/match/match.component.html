@@ -1,0 +1,17 @@
+<div class="grid" cdkDropListGroup>
+    <div class="head"></div>
+      <ng-container *ngFor="let zone of zones">
+        <zone [index]="zone.id" (event)="drop($event.event, $event.zone)"></zone>
+      </ng-container>
+      <div cdkDropList
+          [cdkDropListData]="hand"
+          class="footer">
+        <ng-container *ngFor="let card of hand">
+            <card cdkDrag
+                  [card]="card">
+            </card>
+        </ng-container>
+      </div>
+    <div>Current Turn: {{ (turn$ | async) }}</div>
+    <button (click)="draw()">Draw</button>
+</div>

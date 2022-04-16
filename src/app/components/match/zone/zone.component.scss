@@ -1,0 +1,46 @@
+.zone {
+    background-color: rgba(0,0,0,.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.zone0 {
+    grid-area: zone0;
+}
+
+.zone1 {
+    grid-area: zone1;
+}
+
+.zone2 {
+    grid-area: zone2;
+}
+
+.zone3 {
+    grid-area: zone3;
+}
+
+.zone4 {
+    grid-area: zone4;
+}
+
+.zone5 {
+    grid-area: zone5;
+}
+
+.zone6 {
+    grid-area: zone6;
+}
+
+.zone7 {
+    grid-area: zone7;
+}
+
+.zone4, .zone5, .zone6, .zone7 {
+    &.cdk-drop-list-dragging {
+        background: blue;
+    }
+}
